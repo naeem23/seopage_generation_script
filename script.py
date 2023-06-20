@@ -425,9 +425,3 @@ if __name__ == "__main__":
     main()
 
 
-
-# my key: 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
-# andre key: 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
-
-
-
