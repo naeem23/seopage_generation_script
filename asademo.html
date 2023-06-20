@@ -1,0 +1,357 @@
+{% load static stat_tags %}
+
+<!DOCTYPE html>
+<html lang="en-gb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta http-equiv="content-language" content="en-gb" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo Title</title>
+    <meta name="description" content="Demo description" />
+    <meta name="keywords" content="Keywords that describe the page" />
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Title of the page" />
+    <meta property="og:description" content="Description of the page" />
+    <meta property="og:image" content="https://www.asadistribution.co.uk/static/images/logo-asadirect.png" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Title of the page" />
+    <meta name="twitter:description" content="Description of the page" />
+    <meta name="twitter:image" content="https://www.asadistribution.co.uk/static/images/logo-asadirect.png" />
+    <meta name="twitter:url" content="" />
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "LocalBusiness",
+        "name": "ASA Distribution",
+        "description": "ASA Distribution offers reliable and professional leaflet distribution services in Aley Green. Reach your target audience effectively with our door-to-door flyer delivery.",
+        "url": "https://asadistribution.co.uk/leaflet-distribution-aley-green/",
+        "image": "https://www.asadistribution.co.uk/static/images/logo-asadirect.png",
+        "telephone": "+44 0333 344 9456",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Millmead Business Centre, Mill Mead Rd",
+          "addressLocality": "London",
+          "postalCode": "N17 9QU",
+          "addressCountry": "UK"
+        },
+        "priceRange": "££"
+      }
+    </script>
+
+    <!-- Other necessary tags for SEO -->
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.example.com/" />
+    <meta name="author" content="ASA Distribution" />
+    <meta name="google" content="nositelinkssearchbox" />
+    <meta name="googlebot" content="notranslate" />
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css' %}" />
+
+    <!-- Main Stylesheet -->
+    <link href="{% static 'css/seostyle.min.css' %}" rel="stylesheet" />
+
+    <!--Favicon-->
+    <link href="{% static 'images/asa-favicon.png' %}" rel="shortcut icon" type="image/x-icon"/>
+    <link rel="icon" href="{% static 'images/asa-favicon.png' %}" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- start of header -->
+    <header class="header-nav position-relative bg-light-gray">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-xl navbar-light px-0">
+          <a class="navbar-brand p-0" href="/">
+            <img alt="ASA Distribution" class="img-fluid" src="{% static 'images/logo-asadirect.png' %}"/>
+          </a>
+          <!-- mobile-nav control button -->
+          <button aria-controls="navlinks" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler bg-white rounded-0 p-0" data-target="#navlinks" data-toggle="collapse" type="button">
+            <svg class="nav-toggle-icon" onclick="this.classList.toggle('active')" viewbox="0 0 100 100" width="40">
+              <path class="line top" d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20"></path>
+              <path class="line middle" d="m 70,50 h -40"></path>
+              <path class="line bottom" d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20"></path>
+            </svg>
+          </button>
+          <!-- mobile-nav control button -->
+          <div class="collapse navbar-collapse justify-content-end" id="navlinks">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item dropdown @@about">
+                <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle d-flex justify-content-between align-items-center" data-toggle="dropdown" role="button">
+                  <span class="mr-1">About</span>
+                  <svg fill="none" height="6" viewbox="0 0 9 6" width="9" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 1.06L7.94 0L4.5 3.44L1.06 0L0 1.06L4.5 5.56L9 1.06Z" fill="currentColor"></path>
+                  </svg>
+                </a>
+                <ul class="dropdown-menu">
+                 <li>
+                  <a class="dropdown-item" href="/about-us/">
+                   About us
+                  </a>
+                 </li>
+                 <li>
+                  <a class="dropdown-item" href="/services/">
+                   Our Services
+                  </a>
+                 </li>
+                 <li>
+                  <a class="dropdown-item" href="/clients/">
+                   Our Clients
+                  </a>
+                 </li>
+                 <li>
+                  <a class="dropdown-item" href="/testimonials/">
+                   Testimonial
+                  </a>
+                 </li>
+                 <li>
+                  <a class="dropdown-item" href="/case-studies/">
+                   Case Study
+                  </a>
+                 </li>
+                 <li>
+                  <a class="dropdown-item" href="/quality-leaflet-distribution-control/">
+                   Quality Leaflet Distribution Control
+                  </a>
+                 </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown @@service">
+              <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle d-flex justify-content-between align-items-center" data-toggle="dropdown" href="#" role="button">
+               <span class="mr-1">
+                Services
+               </span>
+               <svg fill="none" height="6" viewbox="0 0 9 6" width="9" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 1.06L7.94 0L4.5 3.44L1.06 0L0 1.06L4.5 5.56L9 1.06Z" fill="currentColor">
+                </path>
+               </svg>
+              </a>
+              <ul class="dropdown-menu">
+               <li>
+                <a class="dropdown-item" href="/business-to-business/">
+                 Business to Business Distribution
+                </a>
+               </li>
+               <li>
+                <a class="dropdown-item" href="/consultation-distribution/">
+                 Consultation Distribution
+                </a>
+               </li>
+               <li>
+                <a class="dropdown-item" href="/hand-to-hand-distribution/">
+                 Hand to Hand Distribution
+                </a>
+               </li>
+               <li>
+                <a class="dropdown-item" href="/solus-leaflet-distribution/">
+                 Solus Distribution
+                </a>
+               </li>
+               <li>
+                <a class="dropdown-item" href="/super-solus-leaflet-distribution/">
+                 Super Solus Distribution
+                </a>
+               </li>
+               <li>
+                <a class="dropdown-item" href="/shared-leaflet-distribution/">
+                 Shared Leaflet Distribution
+                </a>
+               </li>
+               <li>
+                <a class="dropdown-item" href="/flyer-printing/">
+                 Flyer Printing
+                </a>
+               </li>
+              </ul>
+              </li>
+              <li class="nav-item dropdown @@quote">
+              <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle d-flex justify-content-between align-items-center" data-toggle="dropdown" href="#" role="button">
+               <span class="mr-1">
+                Quote
+               </span>
+               <svg fill="none" height="6" viewbox="0 0 9 6" width="9" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 1.06L7.94 0L4.5 3.44L1.06 0L0 1.06L4.5 5.56L9 1.06Z" fill="currentColor">
+                </path>
+               </svg>
+              </a>
+              <ul class="dropdown-menu">
+               <li>
+                <a class="dropdown-item" href="/leaflet-distribution/">
+                 Instant Quote
+                </a>
+               </li>
+               <li>
+                <a class="dropdown-item" href="/quote/">
+                 Custom Quote
+                </a>
+               </li>
+              </ul>
+              </li>
+              <li class="nav-item @@coverage">
+              <a class="nav-link" href="/areas-we-cover/">
+               Coverage
+              </a>
+              </li>
+              <li class="nav-item @@lcount">
+              <a class="nav-link" href="/leaflet-distribution/">
+               Letterbox Count
+              </a>
+              </li>
+              <li class="nav-item @@blog">
+              <a class="nav-link" href="/blog/">
+               Blog
+              </a>
+              </li>
+              <li class="nav-item @@jobs">
+              <a class="nav-link" href="/jobs/">
+               Jobs
+              </a>
+              </li>
+              <li class="nav-item @@contact">
+              <a class="nav-link" href="/contact-us/">
+               Contact
+              </a>
+              </li>
+            </ul>
+          <div class="navbar-button">
+           <a class="btn btn-sm btn-outline-primary" href="https://campaign.asadistribution.co.uk/maps" rel="nofollow" style="padding: 5px 10px !important">
+            Build Campaign
+           </a>
+          </div>
+          </div>
+          <!-- nav links -->
+        </nav>
+      </div>
+    </header>
+    <!-- end of header -->
+
+    <!-- main content -->
+    <section class="my-5">
+      <div class="container">
+        <!-- breadcrumbs -->
+        <div class="row mb-4">
+          <div class="col-12">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a rel="ugc" class="breadcrumb-link" href="#">England</a></li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+        <!-- breadcrumbs -->
+
+        <div class="row">
+          <div class="col-12 col-lg-8 mb-5 mb-lg-0">
+            <div id="main-content"></div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="mb-3 border border-black p-1">
+              <iframe id="map_iframe" width="100%" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=51.454513,-2.58791&amp;hl=es&z=14&amp;output=embed"></iframe>
+            </div>
+            <h5 class="mb-3 text-uppercase fw-bold title">Local News</h5>
+            <div id="news_container">
+              {% if articles|length > 0 %}
+                {% for article in articles %}
+                <div class="single-blog-post d-flex align-items-center mb-2">
+                  <div class="post-thumbnail">
+                    {% if article.image %}
+                      <img src="{{article.image.thumbnail.contentUrl}}" alt="News Image" class="news-image">
+                    {% else %}
+                      <img src="{% static 'images/placeholder-image.png' %}" class="news-image" alt="News report icons created by Freepik - Flaticon">
+                    {% endif %}
+                  </div>
+                  <div class="post-content">
+                    <a href="{{article.url}}" class="news-url" target="_blank">
+                      <h5 class="news-title">{{article.name}}</h5>
+                    </a>
+                    <div class="post-meta mt-1">
+                      <p>
+                        {% if article.provider %}
+                          <span class="post-source">{{article.provider.0.name}}</span> on <span class="post-date">{{article.datePublished|formate_date}}</span>
+                        {% else %}
+                          <span class="post-date">{{article.datePublished|formate_date}}</span>
+                        {% endif %}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+              {% else %}
+                <p class="text-danger">No news articles found!</p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- main content -->
+
+    <!-- start of video -->
+    <section class="mt-90 mb-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="has-video-popup">
+              <button type="button" class="video-play-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/u_fQ6ZQKmrE" data-target="#videoModal">
+                <svg width="1.8em" height="1.8em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
+                </svg>
+              </button>
+              <img class="img-fluid video-thumb" src="{% static 'images/about/youtube.png' %}" alt="youtube video" />
+            </div>
+          </div>
+          <div class="col-lg-6 mt-5 mt-lg-0">
+            <div class="pl-0 pl-lg-4">
+              <p class="pb-20 mb-20 h2">“Please check out our explainer video to find out more about our services”</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of video -->
+
+    <!-- footer -->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="copyright">
+              <p>Copyright © <script>document.write(new Date().getFullYear());</script> All rights reserved by <a href="https://www.asadistribution.co.uk/">ASA Distribution</a> - Leaflet Distributors in London</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+
+    <!-- start of videoModal -->
+    <div class="modal fade rounded" id="videoModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body p-0 bg-transparent">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="" id="showVideo" allowscriptaccess="always" allow="autoplay"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of videoModal -->
+
+    <!-- Plugins Needed for the Project -->
+    <script src="{% static 'plugins/jQuery/jquery.min.js' %}"></script>
+    <script src="{% static 'plugins/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- Main Script -->
+    <script src="{% static 'js/seoscript.js' %}">
+    </script>
+  </body>
+</html>
